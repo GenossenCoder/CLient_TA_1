@@ -9,7 +9,7 @@ function MakePost() {
     const [Name, setName] = useState("");
     const [Titel, setTitel] = useState("");
     const [Text, setText] = useState("");
-    const [createPost,{error}] = useMutation(CREATE_POST_MUTATION)
+    const [createPost] = useMutation(CREATE_POST_MUTATION)
     const addUser = ()=>{
         toast.error("An error has occurred")
         if(Name===""||Titel===""||Text===""){
@@ -22,9 +22,6 @@ function MakePost() {
                Author: Name,
             }
         })
-        if(error){
-            console.log(error)
-        }
     }
     return (
         <div className={styles.PostInput}>

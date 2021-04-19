@@ -1,0 +1,19 @@
+.Footer {
+    text-align: right;
+    margin: 0;
+    position: relative;
+}
+Button{
+    margin-bottom: 5%;
+    margin:0;
+    padding: 20px;
+    background-color:rgb(143, 143, 143);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+    border:none;
+    outline: none;
+    border-radius:30px;
+    width: 20%;
+    font-size:20px;
+    font-weight: 800;
+    margin-right: 30%;
+}

@@ -12,7 +12,7 @@ import {
 function App() {
 
   const client = new ApolloClient({
-    uri:'http://localhost:4000/graphql',
+    uri:'http://take-action-ta.herokuapp.com',
     cache: new InMemoryCache()
   })
 

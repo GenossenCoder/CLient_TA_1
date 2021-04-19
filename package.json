@@ -38,5 +38,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://take-action-ta.herokuapp.com"
+  "proxy": "https://take-action-ta.herokuapp.com"
 }

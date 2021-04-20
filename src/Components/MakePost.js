@@ -29,10 +29,19 @@ function MakePost() {
                Author: Name,
             },
     })
+    const Validate = ()=>{
+        if(Name==="" || Text=="" || Titel===""){
+            window.location.reload(false);
+        }
+        else{
+            createPost();
+        }
+    }
     return (
         <form className={styles.PostInput} onSubmit={(e) => {
             e.preventDefault();
-            createPost();
+            Validate()
+            
           }}>
             <h1 className={styles.Header}>Design the future</h1>
             <li ><input className={styles.PostShort} type="text" placeholder="Name" name="name" onChange={(e)=>{setName(e.target.value)}}></input></li>

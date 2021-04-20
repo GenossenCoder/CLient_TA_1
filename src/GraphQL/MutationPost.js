@@ -1,4 +1,4 @@
-import {gql} from '@apollo/client';
+import {gql, useMutation} from '@apollo/client';
 
 export const CREATE_POST_MUTATION = gql`
 mutation createPost(

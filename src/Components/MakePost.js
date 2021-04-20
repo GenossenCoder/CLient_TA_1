@@ -22,26 +22,21 @@ function MakePost() {
     const [Name, setName] = useState("");
     const [Titel, setTitel] = useState("");
     const [Text, setText] = useState("");
-    const [createPost] = useMutation(CREATE_POST_MUTATION)
-    const addPost = ()=>{
-        if(Name===""||Titel===""||Text===""){
-            return(<h1>...Error</h1>)
-        }
-        createPost({
+    const [createPost] = useMutation(CREATE_POST_MUTATION,{
             variables:{
                 Titel: Titel,
                Content: Text,
                Author: Name,
             },
-        })
-    }
+    })
+    
     return (
         <div className={styles.PostInput}>
             <h1 className={styles.Header}>Design the future</h1>
             <li ><input className={styles.PostShort} type="text" placeholder="Name" name="name" onChange={(e)=>{setName(e.target.value)}}></input></li>
             <li ><input className={styles.PostShort} type="text" placeholder="Title" name="title" onChange={(e)=>{setTitel(e.target.value)}}></input></li>
             <li ><textarea className={styles.PostText} type="text" placeholder="Inhalt" name="text" onChange={(e)=>{setText(e.target.value)}}></textarea></li>
-            <li><button className={styles.PostButton} onClick={addPost}>Send</button></li> 
+            <li><button className={styles.PostButton} onSubmit={(e) => { e.preventDefault(),createPost()}}>Send</button></li> 
         </div>
     )
 }

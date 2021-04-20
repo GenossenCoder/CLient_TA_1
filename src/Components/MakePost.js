@@ -22,7 +22,7 @@ function MakePost() {
     const [Name, setName] = useState("");
     const [Titel, setTitel] = useState("");
     const [Text, setText] = useState("");
-    const [createPost] = useMutation(CREATE_POST_MUTATION,{
+    const [createPost,{data}] = useMutation(CREATE_POST_MUTATION,{
             variables:{
                 Titel: Titel,
                Content: Text,
@@ -33,7 +33,6 @@ function MakePost() {
         <form className={styles.PostInput} onSubmit={(e) => {
             e.preventDefault();
             createPost();
-            window.location.reload(true);
           }}>
             <h1 className={styles.Header}>Design the future</h1>
             <li ><input className={styles.PostShort} type="text" placeholder="Name" name="name" onChange={(e)=>{setName(e.target.value)}}></input></li>

@@ -6,12 +6,12 @@ import "react-toastify/dist/ReactToastify.css";
 function MakePost() {
     const CREATE_POST_MUTATION = gql`
     mutation createPost(
-        $Content:String! 
-        $Titel:String! 
+        $Titel:String!
+        $Content:String!  
         $Author:String){
         createPost(
-            Content:$Content 
-            Titel:$Titel 
+            Titel:$Titel
+            Content:$Content  
             Author:$Author
             ){
             id
@@ -29,8 +29,8 @@ function MakePost() {
         }
         createPost({
             variables:{
+                Titel: Titel,
                Content: Text,
-               Titel: Titel,
                Author: Name,
             },
         })

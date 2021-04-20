@@ -17,9 +17,9 @@ const ContentForm = () => {
     <div className={styles.DIV}>        
         <form className={styles.Form}>
             <h1 className={styles.Titel}>{Titel}</h1> 
-            <div className={styles.Date}>{Date}</div>
-            <h2 className={styles.Name}>{Author}</h2> 
-            <div className={styles.Text}>{Content}</div>
+            <h2 className={styles.Date}>{Date}</h2>
+            <h3 className={styles.Name}>{Author}</h3> 
+            <textarea className={styles.Text} disabled value={Content}></textarea>
         </form>
     </div>
     ));

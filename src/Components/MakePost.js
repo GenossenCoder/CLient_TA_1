@@ -33,6 +33,7 @@ function MakePost() {
         <form className={styles.PostInput} onSubmit={(e) => {
             e.preventDefault();
             createPost();
+            window.location.reload(true);
           }}>
             <h1 className={styles.Header}>Design the future</h1>
             <li ><input className={styles.PostShort} type="text" placeholder="Name" name="name" onChange={(e)=>{setName(e.target.value)}}></input></li>

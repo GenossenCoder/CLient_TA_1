@@ -22,7 +22,7 @@ function MakePost() {
     const [Name, setName] = useState("");
     const [Titel, setTitel] = useState("");
     const [Text, setText] = useState("");
-    const [createPost,{data}] = useMutation(CREATE_POST_MUTATION,{
+    const [createPost] = useMutation(CREATE_POST_MUTATION,{
             variables:{
                 Titel: Titel,
                Content: Text,

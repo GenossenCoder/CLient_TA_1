@@ -30,7 +30,7 @@ function MakePost() {
             },
     })
     const Validate = ()=>{
-        if(Name==="" || Text=="" || Titel===""){
+        if(Name==="" || Text==="" || Titel===""){
             window.location.reload(false);
         }
         else{

@@ -1,0 +1,84 @@
+.Header{
+margin-left: 50%;
+}
+.Form{
+    background-color:white;
+    display: inline-block;
+    min-width: 50%;
+    max-height: 460px;
+    max-width: 50%;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+    margin-right: 13%;
+    padding: 15px;
+    margin-top: 50px;
+}
+.CommentHeader{
+    font-size:20px;
+}
+.Content{
+    margin-top: 30px;
+    height: 100px;
+    resize: none;
+    width: 99%;
+    border-radius:4px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    border: none;
+    color:black;
+    outline: none;
+    font-size:15px;
+}
+.Error{
+    margin:0;
+}
+.InputHeader{
+    margin: 0;
+    margin-top: 30px;
+    font-size:25px;
+    margin-left: 5px;
+}
+.InputText{
+    height: 100px;
+    resize: none;
+    width: 40%;
+    border-radius:4px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    border: none;
+    outline: none;
+    background-color:rgb(217,217,217,0.5);
+    margin-left: 5px;
+    
+}
+.InputName{
+    width:39%;
+    border-radius:4px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    border: none;
+    outline: none;
+    padding:5px;
+    background-color:rgb(217,217,217,0.5);
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+.InputButton{
+    text-align: center;
+    width: 41%;
+    padding:10px;
+    border:none;
+    outline: none;
+    border-radius:4px;
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    background-color: rgb(146, 141, 141);
+    margin-left: 5px;
+}
+.InputDIV{
+    margin:0;
+}

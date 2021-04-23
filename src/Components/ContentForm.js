@@ -37,10 +37,13 @@ const ContentForm = () => {
 
     if(loadcomments){
         return(
+            <div>
+            <button className={styles1.Back} onClick={(e)=>{LoadComments(!loadcomments)}}>Zurück</button>
             <h1 className={styles1.Header}>Post: {titel1}
             <CreateComment ID={id}/>
             <Comments ID={id} Name={titel1}/>
             </h1>
+            </div>
             )
     }  
     else{return Post.map(({Author,Titel,Content,Date,id}) => (

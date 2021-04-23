@@ -12,11 +12,11 @@ img input .header{
 .logo{
     width: 80px;
 }
-.header input{
+.headerinput{
     padding: 15px;
     width: 30%;
     margin: 15px;
-    margin-left: 30%;
+    margin-left: 40%;
     position: absolute;
     font-size: 18px;
     outline: none;

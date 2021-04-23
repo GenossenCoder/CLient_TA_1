@@ -8,7 +8,6 @@ const CreateComment = (props) => {
     const [Content,setContent] = useState("")
     const [Error, setError] = useState("")
     const [Success, setSuccess] = useState("")
-
     const CREATE_POST_MUTATION = gql`
     mutation createComments(
         $PostID:String!

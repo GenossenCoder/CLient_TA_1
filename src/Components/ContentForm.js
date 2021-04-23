@@ -5,7 +5,10 @@ import styles1 from '.././styles/Comments.module.css'
 import {GET_Posts} from '../GraphQL/QueryPosts'
 import Comments from './Comments'
 import CreateComment from './CreateComment'
-const ContentForm = () => {
+const ContentForm = (props) => {
+
+    const parser = props.Parse
+
     const { loading, data} =useQuery(GET_Posts)
     const[Post, setPosts] =useState([]);
     const [loadcomments, LoadComments] = useState(false)
@@ -14,8 +17,6 @@ const ContentForm = () => {
     useEffect(() =>{
         if (data){
             setPosts(data.Post)
-            
-            
         }
     }, [data])
     const onSubmit=(id,Titel)=> {
@@ -26,13 +27,17 @@ const ContentForm = () => {
     if (loading){
         return <div className={styles.DIV}>Loading...</div>
     } 
-
-
-
-
-
-
-
+    if (parser !== null && parser !== undefined && parser.searchPost !== null && parser.searchPost !== undefined) {
+        return (<div className={styles.DIV}>        
+             <form className={styles.Form}>
+                 <h1 className={styles.Titel}>{parser.searchPost.Titel}</h1> 
+                 <h2 className={styles.Date}>{parser.searchPost.Date}</h2>
+                 <h3 className={styles.Name}>{parser.searchPost.Author}</h3> 
+                <textarea className={styles.Text} disabled value={parser.searchPost.Content}></textarea>
+                 <button className={styles.CommentButtons} onClick={(e)=>{e.preventDefault(); onSubmit(parser.searchPost.id,parser.searchPost.Titel)}}>Comments</button>
+             </form>
+         </div>)
+     }
 
 
     if(loadcomments){

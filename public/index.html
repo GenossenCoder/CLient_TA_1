@@ -26,7 +26,27 @@
     -->
     <title>Take Action</title>
   </head>
-  <body>
+  <body class="Background">
+    <style>
+      .Background{
+
+	background: linear-gradient(-45deg, #81CDF9, #99CCFF, #888888,white);
+	background-size: 1000% 1000%;
+	animation: gradient 15s ease infinite;
+  }
+
+  @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+    </style>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--

@@ -28,6 +28,7 @@ const ContentForm = (props) => {
         return <div className={styles.DIV}>Loading...</div>
     } 
     if (parser !== null && parser !== undefined && parser.searchPost !== null && parser.searchPost !== undefined) {
+        console.log()
         return (<div className={styles.DIV}>        
              <form className={styles.Form}>
                  <h1 className={styles.Titel}>{parser.searchPost.Titel}</h1> 

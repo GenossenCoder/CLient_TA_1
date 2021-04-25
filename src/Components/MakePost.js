@@ -17,7 +17,7 @@ function MakePost() {
         }
     }
     `
-
+    const [Button, setButton] = useState("")
     const [Name, setName] = useState("");
     const [Titel, setTitel] = useState("");
     const [Text, setText] = useState("");
@@ -40,6 +40,7 @@ function MakePost() {
             setTimeout(()=>{
                 window.location.reload(true);
             },2000)
+            setButton("disabled")
             
         }
     }
@@ -55,7 +56,7 @@ function MakePost() {
             <li ><input className={styles.PostShort} type="text" placeholder="Name" name="name" onChange={(e)=>{setName(e.target.value)}}></input></li>
             <li ><input className={styles.PostShort} type="text" placeholder="Title" name="title" onChange={(e)=>{setTitel(e.target.value)}}></input></li>
             <li ><textarea className={styles.PostText} type="text" placeholder="Inhalt" name="text" onChange={(e)=>{setText(e.target.value)}}></textarea></li>
-            <li><button className={styles.PostButton}>Send</button></li> 
+            <li><button className={styles.PostButton} disabled={Button}>Send</button></li> 
         </form>
     )
 }

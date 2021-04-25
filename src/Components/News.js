@@ -1,14 +1,14 @@
-import React from 'react'
+import React, {useEffect ,useState,} from 'react'
 import styles from '.././styles/News.module.css'
 
 const News = () => {
-    const[data, setData] = React.useState(null)
+    const[data, setData] = useState(null)
     
     const apiKey="de7a6efadb284f598012913141f52b42";
     let Topic="Climate change";
     let url='https://newsapi.org/v2/everything?q='+Topic+'&apiKey='+apiKey;
     
-    React.useEffect(() =>{
+    useEffect(() =>{
         fetch(url)
         .then(res=>{
           return res.json()

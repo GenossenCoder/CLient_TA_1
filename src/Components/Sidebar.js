@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from '.././styles/Sidebar.module.css'
 import MakePost from './MakePost.js'
-import News from './News'
 
 const Sidebar = (props) => {
     return (

@@ -3,6 +3,7 @@ import styles1 from '.././styles/Comments.module.css'
 import {useMutation,gql} from '@apollo/client'
 import styles from '.././styles/MakePost.module.css'
 const CreateComment = (props) => {
+    const [Button, setButton] = useState("")
     const ID = props.ID
     const [Name, setName]=useState("")
     const [Content,setContent] = useState("")
@@ -39,6 +40,7 @@ const CreateComment = (props) => {
             setTimeout(()=>{
                window.location.reload(true);
             },2000)
+            setButton("disabled")
         }
     }
     return (
@@ -51,10 +53,10 @@ const CreateComment = (props) => {
         <h1 className={styles1.InputHeader}>Comment:</h1>
         <input className={styles1.InputName} placeholder="Name..." onChange={(e)=>{setName(e.target.value)}}></input>
         <div className={styles1.InputDIV}>
-        <textarea className={styles1.InputText} placeholder="Text..."onChange={(e)=>{setContent(e.target.value)}}></textarea>
+        <textarea className={styles1.InputText} placeholder="Content..."onChange={(e)=>{setContent(e.target.value)}}></textarea>
         </div>
         <div className={styles1.InputDIV}>
-            <button className={styles1.InputButton}>Send</button>
+            <button className={styles1.InputButton} disabled={Button}>Send</button>
         </div>
         </form>
     )

@@ -55,7 +55,7 @@ function MakePost() {
             <h1 className={styles.Header}>Design the future</h1>
             <li ><input className={styles.PostShort} type="text" placeholder="Name" name="name" onChange={(e)=>{setName(e.target.value)}}></input></li>
             <li ><input className={styles.PostShort} type="text" placeholder="Title" name="title" onChange={(e)=>{setTitel(e.target.value)}}></input></li>
-            <li ><textarea className={styles.PostText} type="text" placeholder="Inhalt" name="text" onChange={(e)=>{setText(e.target.value)}}></textarea></li>
+            <li ><textarea className={styles.PostText} type="text" placeholder="Content" name="text" onChange={(e)=>{setText(e.target.value)}}></textarea></li>
             <li><button className={styles.PostButton} disabled={Button}>Send</button></li> 
         </form>
     )

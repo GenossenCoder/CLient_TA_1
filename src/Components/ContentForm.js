@@ -44,7 +44,7 @@ const ContentForm = (props) => {
     if(loadcomments){
         return(
             <div>
-            <button className={styles1.Back} onClick={(e)=>{LoadComments(!loadcomments)}}>Zurück</button>
+            <button className={styles1.Back} onClick={(e)=>{LoadComments(!loadcomments)}}>Back</button>
             <h1 className={styles1.Header}>Post: {titel1}
             <CreateComment ID={id}/>
             <Comments ID={id} Name={titel1}/>

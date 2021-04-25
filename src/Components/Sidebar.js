@@ -7,7 +7,6 @@ const Sidebar = (props) => {
     return (
         <div className={styles.Sidebar}>
             <MakePost/>
-            <News/>
             <form className={styles.News}>
             </form>
         </div>
